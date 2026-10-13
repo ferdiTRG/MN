@@ -1,0 +1,26 @@
+{
+  "name": "task1-toko-api",
+  "version": "2.0.0",
+  "private": true,
+  "description": "REST API untuk database task1 MariaDB/MySQL XAMPP dengan stored procedure dan view",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/server.ts",
+    "start": "bun src/server.ts",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "jsonwebtoken": "latest",
+    "mysql2": "latest"
+  },
+  "devDependencies": {
+    "@types/cors": "latest",
+    "@types/express": "latest",
+    "@types/jsonwebtoken": "latest",
+    "@types/node": "latest",
+    "typescript": "latest"
+  }
+}
