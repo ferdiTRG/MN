@@ -1,5 +1,4 @@
 import mysql from 'mysql2/promise';
-import type { RowDataPacket } from 'mysql2';
 import 'dotenv/config';
 
 const dbUser = process.env.DB_USER ?? 'Admin_op';
@@ -23,17 +22,12 @@ export const pool = mysql.createPool({
  * Semua akses database aplikasi dilakukan lewat CALL stored procedure.
  * Fungsi ini mengambil result set pertama yang dikembalikan procedure.
  */
-export async function callProcedure<T extends RowDataPacket = RowDataPacket>(
-  statement: string,
-  params: Array<string | number | boolean | null> = []
-): Promise<T[]> {
+export async function callProcedure(statement, params = []) {
   if (!/^\s*CALL\s/i.test(statement)) {
     throw new Error('Akses database aplikasi hanya boleh menggunakan CALL stored procedure.');
   }
 
   const [rawResult] = await pool.query(statement, params);
-  const resultParts = rawResult as unknown[];
-  const firstResultSet = resultParts.find((part) => Array.isArray(part));
-  return (firstResultSet ?? []) as T[];
+  const firstResultSet = rawResult.find((part) => Array.isArray(part));
+  return firstResultSet ?? [];
 }
-

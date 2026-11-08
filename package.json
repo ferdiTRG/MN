@@ -5,22 +5,15 @@
   "description": "REST API untuk database task1 MariaDB/MySQL XAMPP dengan stored procedure dan view",
   "type": "module",
   "scripts": {
-    "dev": "bun --watch src/server.ts",
-    "start": "bun src/server.ts",
-    "check": "tsc --noEmit"
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "check": "node --check src/server.js && node --check src/auth.js && node --check src/db.js && node --check src/routes/auth.js && node --check src/routes/products.js && node --check src/routes/orders.js && node --check src/routes/reports.js"
   },
   "dependencies": {
-    "cors": "latest",
-    "dotenv": "latest",
-    "express": "latest",
-    "jsonwebtoken": "latest",
-    "mysql2": "latest"
-  },
-  "devDependencies": {
-    "@types/cors": "latest",
-    "@types/express": "latest",
-    "@types/jsonwebtoken": "latest",
-    "@types/node": "latest",
-    "typescript": "latest"
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.5"
   }
 }

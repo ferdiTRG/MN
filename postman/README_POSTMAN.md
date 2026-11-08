@@ -4,7 +4,7 @@
 1. Buka Postman → **Import**.
 2. Import `Toko-API.postman_collection.json` dan `Toko-API-Local.postman_environment.json`.
 3. Pilih environment **Toko API Local** dari dropdown environment.
-4. Pastikan server Bun/Express berjalan di `http://localhost:3000`. Ubah `baseUrl` di environment jika port berbeda.
+4. Pastikan server Node.js/Express berjalan di `http://localhost:3000`. Ubah `baseUrl` di environment jika port berbeda.
 
 ## Akun demo default
 - Customer: `g2cxz@email.com` / `su25435123`

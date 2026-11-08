@@ -1,4 +1,4 @@
-# Task1 Toko API — MySQL/MariaDB XAMPP + DBeaver + Bun/Express
+# Task1 Toko API — MySQL/MariaDB XAMPP + DBeaver + Node.js/Express (JavaScript)
 
 ## Target perubahan sesuai ketentuan
 
@@ -11,7 +11,7 @@
 
 ## Instalasi
 
-Yang diperlukan: XAMPP dengan MySQL/MariaDB aktif, DBeaver, Bun, VS Code, dan Postman atau Thunder Client untuk pengujian API.
+Yang diperlukan: XAMPP dengan MySQL/MariaDB aktif, DBeaver, Node.js (v18+), VS Code, dan Postman atau Thunder Client untuk pengujian API.
 
 ## Urutan SQL awal
 
@@ -51,9 +51,9 @@ Salin `.env.example` menjadi `.env`. Nilai `DB_PASSWORD` harus sama dengan passw
 Dari folder root project di terminal VS Code:
 
 ```powershell
-bun install
-bun run check
-bun dev
+npm install
+npm run check
+npm run dev
 ```
 
 - API: `http://localhost:3000`
